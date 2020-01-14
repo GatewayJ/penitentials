@@ -16,7 +16,6 @@
 				    </el-option>
 				  </el-select>
 				
-				
 				<el-alert v-show= "showalert" @close="closealert"
 				  title="成功提示的文案"
 				  type="success">

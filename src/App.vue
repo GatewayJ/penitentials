@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-	  	<el-header>Header</el-header>
-		
+	  	<el-header>
 		<router-link to="/index">首页</router-link>
-	    <router-link to="/index2">首页1</router-link>
+		<router-link to="/index2">首页1</router-link>
+		</el-header>
+		
+
 		
 		<router-view></router-view>
 	   
