@@ -5,11 +5,13 @@ Vue.use(VueRouter)
 
 import index from "../components/index.vue"
 import index2 from "../components/index2.vue"
+import index3 from "../components/index3.vue"
 
 
 const routes = [
   { path: '/index', component: index },
-  { path: '/index2', component: index2 }
+  { path: '/index2', component: index2 },
+  { path: '/', component: index3 }
 ]
 
 

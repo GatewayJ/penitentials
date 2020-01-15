@@ -1,14 +1,11 @@
 <template>
   <div id="app">
 	  	<el-header>
+		<router-link to="/">首页、</router-link>
 		<router-link to="/index">首页</router-link>
-		<router-link to="/index2">首页1</router-link>
+		<router-link to="/index2">首页2</router-link>
 		</el-header>
-		
-
-		
 		<router-view></router-view>
-	   
 	    <el-footer>Footer</el-footer>
   </div>
 </template>
