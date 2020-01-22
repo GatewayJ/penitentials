@@ -1,34 +1,10 @@
 <template>
-	<el-container>
-		    
-		    <el-main style="background-color:aqua;margin-left:10%;margin-right:10%;">
-君不见，黄河之水天上来，奔流到海不复回。
-
-君不见，高堂明镜悲白发，朝如青丝暮成雪。
-
-人生得意须尽欢，莫使金樽空对月。
-
-天生我材必有用，千金散尽还复来。
-
-烹羊宰牛且为乐，会须一饮三百杯。
-
-岑夫子，丹丘生，将进酒，杯莫停。
-
-与君歌一曲，请君为我倾耳听。
-
-钟鼓馔玉不足贵，但愿长醉不复醒。
-
-古来圣贤皆寂寞，惟有饮者留其名。
-
-陈王昔时宴平乐，斗酒十千恣欢谑。
-
-主人何为言少钱，径须沽取对君酌。
-
-五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。 
-			</el-main>
-		    
-		  </el-container>
-	
+	<div class="text_wapper">
+		<h1 class="title">监控数据计算</h1>
+		<div class="text">
+			<p>{{text}}</p>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -36,7 +12,8 @@
 		name:'index',
 		data() {
 			return {
-				showalert:false
+				showalert:false,
+				text:' 君不见，黄河之水天上来，奔流到科技时代就开始看见艰苦开始的艰苦艰苦的数据库肯定是看见艰苦撒旦，可视对讲科举考试海不复回。君不见，高堂明镜悲白发，朝如青丝暮成雪。人生得意须尽欢，莫使金樽空对月。'
 			}
 		},
 		methods:{
@@ -53,6 +30,28 @@
 		}
 	}
 </script>
-
-<style>
+<style lang="less" scoped>
+	.text_wapper{
+		min-height: 300px;
+		width:77%;
+		padding:20px;
+		background: rgb(173, 149, 69);
+		margin:50px auto;
+		border-radius: 5px;
+		box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+		background-color:#fff;
+		background-image: linear-gradient(#FFF, #cfe6d5);
+		h1{
+			line-height: 70px;
+			color:rgb(78, 77, 77);
+		}
+		.text{
+			font-size: 14px;
+			p{
+				text-indent: 50px;
+				text-align: left;
+				line-height: 24px;
+			}
+		}
+	}
 </style>

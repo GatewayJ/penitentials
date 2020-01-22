@@ -1,5 +1,6 @@
 <template>
-	<el-container>
+	<div class="other">
+		<el-container>
 		    <el-main>
 				  <el-select
 				    v-model="value"
@@ -31,6 +32,9 @@
 			</el-main>
 		  </el-container>
 	
+
+
+	</div>
 </template>
 
 <script>
@@ -65,7 +69,16 @@
 			}
 		}
 	}
-				</script>
+</script>
 
-<style>
+<style lang="less" scoped>
+	.other{
+		min-height: 300px;
+		width:77%;
+		padding:20px;
+		background: #fff;
+		margin:50px auto;
+		border-radius: 5px;
+		box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+	}
 </style>

@@ -1,51 +1,39 @@
 <template>
   <div id="app">
-	  	<el-header>
-		<router-link to="/">首页、</router-link>
-		<router-link to="/index">首页</router-link>
-		<router-link to="/index2">首页2</router-link>
-		</el-header>
-		<router-view></router-view>
-	    <el-footer>Footer</el-footer>
+	<my-head></my-head>
+	<div class="container"><router-view></router-view></div>
+	<my-footer></my-footer>
   </div>
 </template>
-
-
 <script>
+import MyHead from '../src/components/Head'
+import MyFooter from '../src/components/Footer'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+	  MyHead,
+	  MyFooter
+  },
+  data(){
+	return{
+		
+	}
+}
 }
 </script>
 
 <style>
-	
-.el-header {
-	border-radius: 4px;
-	background-color: #909399;
-	color: #333;
-	text-align: center;
-	line-height: 60px;
+*{
+	margin:0;
+	padding:0;
 }
-	
-.el-footer {
-	border-radius: 4px;
-	background-color: #000000;
-	color: #333;
-	text-align: center;
-	line-height: 60px;
-	}
-	
-.el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    text-align: center;
-    line-height: 160px;
-  }
-
-	
 #app {
   font-family: Helvetica, sans-serif;
   text-align: center;
+  height:100%;
+  width:100%;
+  position: relative;
+  background-color: #F0EDE3;
 }
 </style>
 
