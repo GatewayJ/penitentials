@@ -3,15 +3,17 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import index from "../components/index.vue"
-import index2 from "../components/index2.vue"
-import index3 from "../components/index3.vue"
+import Index from "../components/Index.vue"
+import PersonalPlans from "../components/PersonalPlans.vue"
+import PersonalProfile from "../components/PersonalProfile.vue"
+import ArticalDetail from "../components/ArticalDetail.vue"
 
 
 const routes = [
-  { path: '/index', component: index },
-  { path: '/index2', component: index2 },
-  { path: '/', component: index3 }
+  { path: '/PersonalPlans', component: PersonalPlans },
+  { path: '/PersonalProfile', component: PersonalProfile },
+  { path: '/ArticalDetail', component: ArticalDetail },
+  { path: '/', component: Index }
 ]
 
 

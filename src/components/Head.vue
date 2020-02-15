@@ -5,11 +5,11 @@
             <li @click="switchTo('/')">
                 <a :class="{on: '/' === $route.path}">首页</a>
             </li>
-           <li @click="switchTo('/index')">
-                <a :class="{on: '/index' === $route.path}">详情</a>
+           <li @click="switchTo('/PersonalProfile')">
+                <a :class="{on: '/PersonalProfile' === $route.path}">简介</a>
             </li>
-            <li @click="switchTo('/index2')">
-                <a :class="{on: '/index2' === $route.path}">其他</a>
+            <li @click="switchTo('/PersonalPlans')">
+                <a :class="{on: '/PersonalPlans' === $route.path}">个人计划</a>
             </li>
         </ul>
     </div>
