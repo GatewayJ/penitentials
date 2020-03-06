@@ -10,7 +10,7 @@ export default {
 </script>
 <style lang="less" scoped>
     .footer_warpper{
-        height:80px;
+        height:40px;
         background-color: #fff;
         width:77%;
         margin:0 auto;
