@@ -19,7 +19,7 @@ export default {
     name:'MyHead',
     data(){
         return{
-            isActive:false,
+            isActive:false
         }
     },
     methods:{

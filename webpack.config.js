@@ -20,10 +20,19 @@ module.exports = (options = {}) => ({
         test: /\.vue$/,
         use: ['vue-loader']
       },
+      // {
+      //   test: /\.js$/,
+      //   use: ['babel-loader'],
+      //   exclude: /node_modules/
+      // },
       {
         test: /\.js$/,
-        use: ['babel-loader'],
-        exclude: /node_modules/
+        use: [{
+          loader: 'babel-loader',
+          options: {
+             presets: ['es2015']
+          }
+        }]
       },
       {
         test: /\.css$/,
@@ -37,7 +46,8 @@ module.exports = (options = {}) => ({
             limit: 10000
           }
         }]
-      }
+      },
+     
     ]
   },
   plugins: [

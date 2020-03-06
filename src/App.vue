@@ -13,12 +13,7 @@ export default {
   components:{
 	  MyHead,
 	  MyFooter
-  },
-  data(){
-	return{
-		
-	}
-}
+  }
 }
 </script>
 
