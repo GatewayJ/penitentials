@@ -4,8 +4,8 @@
   "author": "yi.shyang@ele.me",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --env.dev  --open",
-    "build": "rimraf dist && webpack -p --progress --hide-modules"
+    "dev": "webpack-dev-server --inline --hot --env.dev  --open --config build/webpack.dev.conf.js",
+    "build": "rimraf dist && webpack -p --progress --config build/webpack.pro.conf.js --hide-modules"
   },
   "dependencies": {
     "axios": "^0.19.2",
