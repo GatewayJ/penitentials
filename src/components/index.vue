@@ -90,7 +90,6 @@
 					padding:10px;
 					height: 173px;
 					p{
-						text-indent: 30px;
 						line-height: 24px;
 						height:100%;
 						overflow: hidden;

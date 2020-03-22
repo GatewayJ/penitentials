@@ -50,9 +50,12 @@
 		.text{
 			font-size: 14px;
 			p{
-				text-indent: 50px;
 				text-align: left;
 				line-height: 24px;
+								/deep/ img{
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
 	}
