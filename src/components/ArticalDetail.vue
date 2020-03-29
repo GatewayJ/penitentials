@@ -32,7 +32,7 @@
 		  },
 	}
 </script>
-<style lang="less" scoped>
+<style lang="less" >
 	.text_wapper{
 		min-height: 300px;
 		width:77%;
@@ -53,10 +53,16 @@
 				text-align: left;
 				line-height: 24px;
 								/deep/ img{
-					width: 100%;
-					height: 100%;
+					max-width: 100%;
+					max-height: 100%;
 				}
 			}
+			pre {
+    margin: .5em 0;
+    padding: .4em .6em;
+    border-radius: 19px;
+    background: #e5d9ca;
+}
 		}
 	}
 </style>
