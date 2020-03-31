@@ -58,11 +58,13 @@
 				}
 			}
 			pre {
-    margin: .5em 0;
-    padding: .4em .6em;
-    border-radius: 19px;
-    background: #e5d9ca;
-}
+				overflow: auto;
+				color: whitesmoke;
+				margin: .5em 0;
+				padding: .4em .6em;
+				border-radius: 19px;
+				background: black;
+				}		
 		}
 	}
 </style>
