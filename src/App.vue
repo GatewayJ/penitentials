@@ -30,5 +30,8 @@ export default {
   position: relative;
   background-color: #F0EDE3;
 }
+.container {
+      margin-top: 30px;
+}
 </style>
 

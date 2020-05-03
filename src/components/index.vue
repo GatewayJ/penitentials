@@ -1,20 +1,23 @@
-<template>	
-	<div class="text-warpper">
-		<div class="text-content">
-			<div class="box-card" v-for="(item,index) in text" :key="index">
-				<div class="header">
-					<span>{{item.title}}</span>
-					<el-button style="padding: 3px 0;margin-right:7px;" type="text" @click="toDetail(item.title)">详情</el-button>
-				</div>
-				<div class="content">
-					<p>{{item.summary}}</p>
-				</div>
-			</div>
-		</div>
-	</div>
+<template>
+	<el-row  type="flex"  justify="center" >
+		<el-col :span="18">
+				<el-timeline  style="text-align: left;">
+					<el-timeline-item color="#0bbd87" timestamp="2018/4/12 12:12:12" placement="top"  v-for="(item,index) in text" :key="index">
+					<el-card>
+						<h4>{{item.title}}
+							<el-button type="text" @click="toDetail(item.title)">详情</el-button>
+						</h4>
+						<p><span>{{item.summary}}</span></p>
+					</el-card>
+					</el-timeline-item>
+					<el-timeline-item color="#F0EDE3">
+					</el-timeline-item>
+				</el-timeline>
+		</el-col>
+	</el-row>
 </template>
 <script>
-	import artical from '../api'
+	import artical from '../api' 
 	export default{
 		name:"index3",
 		data(){
@@ -40,65 +43,6 @@
 	}
 </script>
 <style lang="less" scoped>
-	.text-warpper{
-		min-height: 300px;
-		width:80%;
-		padding:0;
-		margin:50px auto;
-		background: #F0EDE3;
-		.text-content{
-			// width:1126px;
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			flex-wrap: wrap;
-			margin:0 auto;
-			
-			.box-card {
-				width: 330px;
-				height: 250px;
-				margin-right: 40px;
-				margin-bottom: 40px;
-				box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
-				border: 1px solid #EBEEF5;
-				border-radius: 5px;
-				background-color: #fff;
-				color: #303133;
-				&:nth-of-type(3n){
-					margin-right: 0;
-				}
-				.header{
-					height: 50px;
-					line-height: 50px;
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					border-bottom: 1px solid #eee;
-					padding:0 15px;
-					span{
-						font-size: 14px;
-						width:250px;
-						text-align: left;
-						overflow: hidden;
-						white-space: nowrap;
-						text-overflow: ellipsis;
-					}
-				}
-				.content{
-					font-size: 14px;
-					text-align: left;
-					padding:10px;
-					height: 173px;
-					p{
-						line-height: 24px;
-						height:100%;
-						overflow: hidden;
-					}
-				}
-			}
 
-		}
-		
-	}
 </style>>
  

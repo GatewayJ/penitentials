@@ -1,7 +1,11 @@
 <template>
-    <div class="footer_warpper">
-        <p>空间数据库就是会计考试的</p>
-    </div>
+    <el-row type="flex"  justify="center" style="padding-top: 30px;">
+        <el-col :span="18">
+            <div class="footer_warpper">
+                <p>footer</p>
+            </div>
+        </el-col>
+    </el-row>
 </template>
 <script>
 export default {
@@ -12,7 +16,6 @@ export default {
     .footer_warpper{
         height:40px;
         background-color: #fff;
-        width:77%;
         margin:0 auto;
         padding:20px;
         border-radius: 5px;

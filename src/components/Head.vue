@@ -1,18 +1,22 @@
 <template>
-    <div class="head_warpper">
-        <h1>个人博客</h1>
-        <ul>
-            <li @click="switchTo('/')">
-                <a :class="{on: '/' === $route.path}">首页</a>
-            </li>
-           <li @click="switchTo('/PersonalProfile')">
-                <a :class="{on: '/PersonalProfile' === $route.path}">简介</a>
-            </li>
-            <li @click="switchTo('/PersonalPlans')">
-                <a :class="{on: '/PersonalPlans' === $route.path}">个人计划</a>
-            </li>
-        </ul>
-    </div>
+        <el-row   type="flex"  justify="center">
+            <el-col :span="18">
+                <div class="head_warpper">
+                <h1>个人博客</h1>
+                <ul>
+                    <li @click="switchTo('/')">
+                        <a :class="{on: '/' === $route.path}">首页</a>
+                    </li>
+                <li @click="switchTo('/PersonalProfile')">
+                        <a :class="{on: '/PersonalProfile' === $route.path}">简介</a>
+                    </li>
+                    <li @click="switchTo('/PersonalPlans')">
+                        <a :class="{on: '/PersonalPlans' === $route.path}">个人计划</a>
+                    </li>
+                </ul>
+                </div>
+            </el-col>
+        </el-row>
 </template>
 <script>
 export default {
@@ -32,8 +36,6 @@ export default {
 </script>
 <style lang="less" scoped>
     .head_warpper{
-        width: 77%;
-        height: 150px;
         padding:30px 20px 20px;
         margin: 0 auto;
         background:url('../assets/image/banner.jpg') no-repeat;

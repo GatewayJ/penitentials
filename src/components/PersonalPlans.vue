@@ -1,40 +1,41 @@
 <template>
-	<div class="other">
-		<el-container>
-		    <el-main>
-				  <el-select
-				    v-model="value"
-				    multiple
-				    filterable
-				    allow-create
-				    default-first-option
-				    placeholder="请选择标签">
-				    <el-option
-				      v-for="item in options"
-				      :key="item.value"
-				      :label="item.label"
-				      :value="item.value">
-				    </el-option>
-				  </el-select>
-				
-				<el-alert v-show= "showalert" @close="closealert"
-				  title="成功提示的文案"
-				  type="success">
-				</el-alert>
-				<div>
-				  <el-row>
-				    <el-button v-on:click= "button">默认按钮</el-button>
-				    <el-button v-on:click= "alertbutton" type="primary">主要按钮</el-button>
-				    <el-button type="success">成功按钮</el-button>
-				    <el-button type="info">信息按钮</el-button>
-				  </el-row>
-				</div>
-			</el-main>
-		  </el-container>
-	
-
-
-	</div>
+	<el-row  type="flex"  justify="center" >
+		<el-col :span="18">
+			<div class="other">
+				<el-container>
+					<el-main>
+						<el-select
+							v-model="value"
+							multiple
+							filterable
+							allow-create
+							default-first-option
+							placeholder="请选择标签">
+							<el-option
+							v-for="item in options"
+							:key="item.value"
+							:label="item.label"
+							:value="item.value">
+							</el-option>
+						</el-select>
+						
+						<el-alert v-show= "showalert" @close="closealert"
+						title="成功提示的文案"
+						type="success">
+						</el-alert>
+						<div>
+						<el-row>
+							<el-button v-on:click= "button">默认按钮</el-button>
+							<el-button v-on:click= "alertbutton" type="primary">主要按钮</el-button>
+							<el-button type="success">成功按钮</el-button>
+							<el-button type="info">信息按钮</el-button>
+						</el-row>
+						</div>
+					</el-main>
+				</el-container>
+			</div>
+	    </el-col>
+    </el-row>
 </template>
 
 <script>
@@ -74,7 +75,6 @@
 <style lang="less" scoped>
 	.other{
 		min-height: 300px;
-		width:77%;
 		padding:20px;
 		background: #fff;
 		margin:50px auto;

@@ -1,10 +1,14 @@
 <template>
-	<div class="text_wapper">
-		<h1 class="title">监控数据计算</h1>
-		<div class="text">
-			<p>{{text}}</p>
-		</div>
-	</div>
+	<el-row  type="flex"  justify="center" >
+		<el-col :span="18">
+			<div class="text_wapper">
+				<h1 class="title">监控数据计算</h1>
+				<div class="text">
+					<p>{{text}}</p>
+				</div>
+			</div>
+	    </el-col>
+    </el-row>
 </template>
 
 <script>
@@ -33,7 +37,6 @@
 <style lang="less" scoped>
 	.text_wapper{
 		min-height: 300px;
-		width:77%;
 		padding:20px;
 		background: rgb(173, 149, 69);
 		margin:50px auto;
