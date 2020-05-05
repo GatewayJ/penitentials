@@ -4,7 +4,7 @@
 				<el-timeline  style="text-align: left;">
 					<el-timeline-item color="#0bbd87" :timestamp="item.pushed" placement="top"  v-for="(item,index) in text" :key="index">
 					<el-card>
-						<h4>{{item.title}}
+						<h4>{{item.title}} <el-tag style="margin-right: 5px;"  effect="light" type="success" size="mini" v-for= "(tag_content,tag_key)  in item.articaltag" :key= 'tag_key'> {{ tag_content.tag_content }}</el-tag>
 							<el-button type="text" @click="toDetail(item.title)">详情</el-button>
 						</h4>
 						<p><span>{{item.summary}}</span></p>
