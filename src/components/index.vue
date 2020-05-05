@@ -2,7 +2,7 @@
 	<el-row  type="flex"  justify="center" >
 		<el-col :span="18">
 				<el-timeline  style="text-align: left;">
-					<el-timeline-item color="#0bbd87" timestamp="2018/4/12 12:12:12" placement="top"  v-for="(item,index) in text" :key="index">
+					<el-timeline-item color="#0bbd87" :timestamp="item.pushed" placement="top"  v-for="(item,index) in text" :key="index">
 					<el-card>
 						<h4>{{item.title}}
 							<el-button type="text" @click="toDetail(item.title)">详情</el-button>
