@@ -60,7 +60,7 @@ module.exports = (options = {}) => ({
 	new webpack.DefinePlugin({
 	  "process.env":{
 	    NODE_ENV:JSON.stringify('dev'),
-		BASE_URL:JSON.stringify('http://39.99.154.102')
+		BASE_URL:JSON.stringify('http://www.demoio.cn')
 	   }
 	})
   ],
