@@ -2,7 +2,7 @@
     <el-row type="flex"  justify="center" style="padding-top: 30px;">
         <el-col :span="18">
             <div class="footer_warpper">
-                <p>footer</p>
+                <p><a href="http://beian.miit.gov.cn/">辽ICP备20007991号-1</a></p>
             </div>
         </el-col>
     </el-row>
