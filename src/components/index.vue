@@ -1,4 +1,5 @@
 <template>
+<div>
 	<el-row  type="flex"  justify="center" >
 		<el-col :span="18">
 				<el-timeline  style="text-align: left;">
@@ -15,6 +16,19 @@
 				</el-timeline>
 		</el-col>
 	</el-row>
+	<el-row  type="flex" justify="center">
+			<el-col >
+					<el-pagination
+							layout="prev, pager, next"
+							background
+							:total="total"
+							:page-size='5'
+							:hide-on-single-page='true'
+							@current-change='current_change'>
+						</el-pagination>
+			</el-col>
+	</el-row>
+	</div>
 </template>
 <script>
 	import artical from '../api' 
@@ -23,19 +37,36 @@
 		data(){
 			return {
 				text:[],
+				total:0,
+				prev:'',
 			}
 			
 		},
 		mounted: function (){
 			var _this = this
 			artical.getArticalList().then(function(res){
-					  _this.text = res.data
+					  _this.text = res.data.results
+					  _this.total = res.data.count
+					  _this.prev = res.data.previous
+					  _this.next = res.data.next
 				  })
 			      .catch(function (error) { // 请求失败处理
 			        console.log(error);
 			      });
 		},
 		methods:{
+			current_change(currentPage){
+				var _this = this
+				artical.getArticalList(currentPage).then(function(res){
+						_this.text = res.data.results
+						_this.total = res.data.count
+						_this.prev = res.data.previous
+						_this.next = res.data.next
+					})
+					.catch(function (error) { // 请求失败处理
+						console.log(error);
+					});
+			},
 			toDetail(ArticalTitle){
 				this.$router.push({path:'/ArticalDetail',query:{ArticalTitle:ArticalTitle}})
 			}
